@@ -1,9 +1,10 @@
 LMGaugeView
 ==============
 LMGaugeView is a simple and customizable gauge control for iOS inspired by [Flavor](https://dribbble.com/flavor) sketch on [Dribbble](https://dribbble.com/shots/1217274-Speedometer-Day-Night-Mode).
-
-
-<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot2.png"/>
+<br>
+<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/image1.jpg" align="middle"/>
+<br>
+<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot1.png"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot3.gif"/>
 
