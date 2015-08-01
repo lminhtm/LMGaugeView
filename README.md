@@ -3,7 +3,7 @@ LMGaugeView
 LMGaugeView is a simple and customizable gauge control for iOS inspired by [Flavor](https://dribbble.com/flavor) sketch on [Dribbble](https://dribbble.com/shots/1217274-Speedometer-Day-Night-Mode).
 
 
-<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot1.png"/>
+<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot2.png"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot3.gif"/>
 
@@ -36,7 +36,7 @@ gaugeView.value = 40;
 
 ## Customization
 You can customize the following properties of LMGaugeView:
-
+```ObjC
 @property (nonatomic, assign) CGFloat minValue;
 @property (nonatomic, assign) CGFloat maxValue;
 @property (nonatomic, assign) CGFloat limitValue;
@@ -58,7 +58,7 @@ You can customize the following properties of LMGaugeView:
 @property (nonatomic, copy)   NSString *unitOfMeasurement;
 @property (nonatomic, strong) UIFont *unitOfMeasurementFont;
 @property (nonatomic, strong) UIColor *unitOfMeasurementTextColor;
-
+```
 (See sample Xcode project in /LMGaugeViewDemo)
 
 ## License
