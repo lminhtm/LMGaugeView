@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CE9FFE71B6C7058004C633B /* LMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE9FFE61B6C7058004C633B /* LMGaugeView.m */; };
+		62166421198AB252009AD267 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62166420198AB252009AD267 /* Foundation.framework */; };
+		62166423198AB252009AD267 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62166422198AB252009AD267 /* CoreGraphics.framework */; };
+		62166425198AB252009AD267 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62166424198AB252009AD267 /* UIKit.framework */; };
+		6216642B198AB252009AD267 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62166429198AB252009AD267 /* InfoPlist.strings */; };
+		6216642D198AB252009AD267 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6216642C198AB252009AD267 /* main.m */; };
+		62166431198AB252009AD267 /* LMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62166430198AB252009AD267 /* LMAppDelegate.m */; };
+		62166434198AB252009AD267 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62166432198AB252009AD267 /* Main.storyboard */; };
+		62166437198AB252009AD267 /* LMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62166436198AB252009AD267 /* LMViewController.m */; };
+		62166439198AB252009AD267 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62166438198AB252009AD267 /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5CE9FFE51B6C7058004C633B /* LMGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMGaugeView.h; sourceTree = "<group>"; };
+		5CE9FFE61B6C7058004C633B /* LMGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMGaugeView.m; sourceTree = "<group>"; };
+		6216641D198AB252009AD267 /* LMGaugeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMGaugeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62166420198AB252009AD267 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		62166422198AB252009AD267 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		62166424198AB252009AD267 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		62166428198AB252009AD267 /* LMGaugeViewDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LMGaugeViewDemo-Info.plist"; sourceTree = "<group>"; };
+		6216642A198AB252009AD267 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6216642C198AB252009AD267 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6216642E198AB252009AD267 /* LMGaugeViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LMGaugeViewDemo-Prefix.pch"; sourceTree = "<group>"; };
+		6216642F198AB252009AD267 /* LMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMAppDelegate.h; sourceTree = "<group>"; };
+		62166430198AB252009AD267 /* LMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMAppDelegate.m; sourceTree = "<group>"; };
+		62166433198AB252009AD267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62166435198AB252009AD267 /* LMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMViewController.h; sourceTree = "<group>"; };
+		62166436198AB252009AD267 /* LMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMViewController.m; sourceTree = "<group>"; };
+		62166438198AB252009AD267 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6216641A198AB252009AD267 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62166423198AB252009AD267 /* CoreGraphics.framework in Frameworks */,
+				62166425198AB252009AD267 /* UIKit.framework in Frameworks */,
+				62166421198AB252009AD267 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CE9FFE41B6C7058004C633B /* LMGaugeView */ = {
+			isa = PBXGroup;
+			children = (
+				5CE9FFE51B6C7058004C633B /* LMGaugeView.h */,
+				5CE9FFE61B6C7058004C633B /* LMGaugeView.m */,
+			);
+			name = LMGaugeView;
+			path = ../LMGaugeView;
+			sourceTree = "<group>";
+		};
+		62166414198AB252009AD267 = {
+			isa = PBXGroup;
+			children = (
+				5CE9FFE41B6C7058004C633B /* LMGaugeView */,
+				62166426198AB252009AD267 /* LMGaugeViewDemo */,
+				6216641F198AB252009AD267 /* Frameworks */,
+				6216641E198AB252009AD267 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6216641E198AB252009AD267 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6216641D198AB252009AD267 /* LMGaugeView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6216641F198AB252009AD267 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62166420198AB252009AD267 /* Foundation.framework */,
+				62166422198AB252009AD267 /* CoreGraphics.framework */,
+				62166424198AB252009AD267 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62166426198AB252009AD267 /* LMGaugeViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6216642F198AB252009AD267 /* LMAppDelegate.h */,
+				62166430198AB252009AD267 /* LMAppDelegate.m */,
+				62166432198AB252009AD267 /* Main.storyboard */,
+				62166435198AB252009AD267 /* LMViewController.h */,
+				62166436198AB252009AD267 /* LMViewController.m */,
+				62166427198AB252009AD267 /* Supporting Files */,
+			);
+			path = LMGaugeViewDemo;
+			sourceTree = "<group>";
+		};
+		62166427198AB252009AD267 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62166438198AB252009AD267 /* Images.xcassets */,
+				62166428198AB252009AD267 /* LMGaugeViewDemo-Info.plist */,
+				62166429198AB252009AD267 /* InfoPlist.strings */,
+				6216642C198AB252009AD267 /* main.m */,
+				6216642E198AB252009AD267 /* LMGaugeViewDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6216641C198AB252009AD267 /* LMGaugeViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6216644F198AB253009AD267 /* Build configuration list for PBXNativeTarget "LMGaugeViewDemo" */;
+			buildPhases = (
+				62166419198AB252009AD267 /* Sources */,
+				6216641A198AB252009AD267 /* Frameworks */,
+				6216641B198AB252009AD267 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LMGaugeViewDemo;
+			productName = LMGaugeView;
+			productReference = 6216641D198AB252009AD267 /* LMGaugeView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62166415198AB252009AD267 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = LMinh;
+			};
+			buildConfigurationList = 62166418198AB252009AD267 /* Build configuration list for PBXProject "LMGaugeViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62166414198AB252009AD267;
+			productRefGroup = 6216641E198AB252009AD267 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6216641C198AB252009AD267 /* LMGaugeViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6216641B198AB252009AD267 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62166439198AB252009AD267 /* Images.xcassets in Resources */,
+				6216642B198AB252009AD267 /* InfoPlist.strings in Resources */,
+				62166434198AB252009AD267 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62166419198AB252009AD267 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6216642D198AB252009AD267 /* main.m in Sources */,
+				5CE9FFE71B6C7058004C633B /* LMGaugeView.m in Sources */,
+				62166431198AB252009AD267 /* LMAppDelegate.m in Sources */,
+				62166437198AB252009AD267 /* LMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		62166429198AB252009AD267 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6216642A198AB252009AD267 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		62166432198AB252009AD267 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62166433198AB252009AD267 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6216644D198AB253009AD267 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6216644E198AB253009AD267 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62166450198AB253009AD267 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LMGaugeViewDemo/LMGaugeViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "LMGaugeViewDemo/LMGaugeViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = LMGaugeView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		62166451198AB253009AD267 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LMGaugeViewDemo/LMGaugeViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "LMGaugeViewDemo/LMGaugeViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = LMGaugeView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62166418198AB252009AD267 /* Build configuration list for PBXProject "LMGaugeViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6216644D198AB253009AD267 /* Debug */,
+				6216644E198AB253009AD267 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6216644F198AB253009AD267 /* Build configuration list for PBXNativeTarget "LMGaugeViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62166450198AB253009AD267 /* Debug */,
+				62166451198AB253009AD267 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62166415198AB252009AD267 /* Project object */;
+}

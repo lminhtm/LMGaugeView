@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="LMViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgZ-WN-tPe" customClass="LMGaugeView">
+                                <rect key="frame" x="20" y="114" width="280" height="280"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UgZ-WN-tPe" secondAttribute="height" multiplier="1:1" id="x0s-rf-4tG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="limitValue">
+                                        <real key="value" value="33"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="81"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Fmj-n4-TBj"/>
+                                </connections>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IR3-O8-TRX">
+                                <rect key="frame" x="134" y="487" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changedStyleSwitchValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Kq5-AS-1ZL"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by LMinh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-fn-VJ8" userLabel="Label - About">
+                                <rect key="frame" x="20" y="538" width="280" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="jQR-oE-QbD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DcH-fn-VJ8" secondAttribute="bottom" constant="10" id="8Oe-gH-qFC"/>
+                            <constraint firstAttribute="centerY" secondItem="UgZ-WN-tPe" secondAttribute="centerY" constant="30" id="8Xq-JF-rxf"/>
+                            <constraint firstAttribute="trailing" secondItem="UgZ-WN-tPe" secondAttribute="trailing" constant="20" id="92c-SJ-R4D"/>
+                            <constraint firstItem="DcH-fn-VJ8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="N63-DU-8TU"/>
+                            <constraint firstAttribute="trailing" secondItem="DcH-fn-VJ8" secondAttribute="trailing" constant="20" id="VYg-bx-dg0"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IR3-O8-TRX" secondAttribute="bottom" constant="50" id="YRO-b6-T15"/>
+                            <constraint firstAttribute="centerX" secondItem="UgZ-WN-tPe" secondAttribute="centerX" id="cdb-I3-mk4"/>
+                            <constraint firstAttribute="centerX" secondItem="IR3-O8-TRX" secondAttribute="centerX" constant="1.5" id="iX8-Qn-h6S"/>
+                            <constraint firstItem="UgZ-WN-tPe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="n2K-dz-HzF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aboutLabel" destination="DcH-fn-VJ8" id="O5e-Cc-wZL"/>
+                        <outlet property="gaugeView" destination="UgZ-WN-tPe" id="7qB-Qp-bsV"/>
+                        <outlet property="nightModeSwitch" destination="IR3-O8-TRX" id="L8g-e0-Rxt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="358"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
