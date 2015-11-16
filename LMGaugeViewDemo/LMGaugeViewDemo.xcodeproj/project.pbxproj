@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C8E55721BF977A0009C38FC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8E55711BF977A0009C38FC /* Launch Screen.storyboard */; };
 		5CE9FFE71B6C7058004C633B /* LMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE9FFE61B6C7058004C633B /* LMGaugeView.m */; };
 		62166421198AB252009AD267 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62166420198AB252009AD267 /* Foundation.framework */; };
 		62166423198AB252009AD267 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62166422198AB252009AD267 /* CoreGraphics.framework */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C8E55711BF977A0009C38FC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5CE9FFE51B6C7058004C633B /* LMGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMGaugeView.h; sourceTree = "<group>"; };
 		5CE9FFE61B6C7058004C633B /* LMGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMGaugeView.m; sourceTree = "<group>"; };
 		6216641D198AB252009AD267 /* LMGaugeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMGaugeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				62166438198AB252009AD267 /* Images.xcassets */,
+				5C8E55711BF977A0009C38FC /* Launch Screen.storyboard */,
 				62166428198AB252009AD267 /* LMGaugeViewDemo-Info.plist */,
 				62166429198AB252009AD267 /* InfoPlist.strings */,
 				6216642C198AB252009AD267 /* main.m */,
@@ -142,7 +145,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = LM;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = LMinh;
 			};
 			buildConfigurationList = 62166418198AB252009AD267 /* Build configuration list for PBXProject "LMGaugeViewDemo" */;
@@ -170,6 +173,7 @@
 			files = (
 				62166439198AB252009AD267 /* Images.xcassets in Resources */,
 				6216642B198AB252009AD267 /* InfoPlist.strings in Resources */,
+				5C8E55721BF977A0009C38FC /* Launch Screen.storyboard in Resources */,
 				62166434198AB252009AD267 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +232,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -289,6 +294,7 @@
 				GCC_PREFIX_HEADER = "LMGaugeViewDemo/LMGaugeViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "LMGaugeViewDemo/LMGaugeViewDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lminh.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = LMGaugeView;
 				WRAPPER_EXTENSION = app;
 			};
@@ -303,6 +309,7 @@
 				GCC_PREFIX_HEADER = "LMGaugeViewDemo/LMGaugeViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "LMGaugeViewDemo/LMGaugeViewDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lminh.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = LMGaugeView;
 				WRAPPER_EXTENSION = app;
 			};

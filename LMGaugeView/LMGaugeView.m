@@ -127,7 +127,7 @@
     /*!
      *  Set progress for ring layer
      */
-    CGFloat progress = (self.value - self.minValue)/self.maxValue;
+    CGFloat progress = self.maxValue ? (self.value - self.minValue)/self.maxValue : 0;
     self.progressLayer.strokeEnd = progress;
     
     /*!
@@ -148,8 +148,8 @@
     /*!
      *  Prepare drawing
      */
-    self.divisionUnitValue = (self.maxValue - self.minValue)/self.numOfDivisions;
-    self.divisionUnitAngle = (M_PI * 2 - ABS(self.endAngle - self.startAngle))/self.numOfDivisions;
+    self.divisionUnitValue = self.numOfDivisions ? (self.maxValue - self.minValue)/self.numOfDivisions : 0;
+    self.divisionUnitAngle = self.numOfDivisions ? (M_PI * 2 - ABS(self.endAngle - self.startAngle))/self.numOfDivisions : 0;
     CGPoint center = CGPointMake(CGRectGetWidth(self.bounds)/2, CGRectGetHeight(self.bounds)/2);
     CGFloat ringRadius = MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))/2 - self.ringThickness/2;
     CGFloat dotRadius = ringRadius - self.ringThickness/2 - self.divisionsPadding - self.divisionsRadius/2;
@@ -176,11 +176,11 @@
     /*!
      *  Draw divisions and subdivisions
      */
-    for (int i = 0; i <= self.numOfDivisions; i++)
+    for (int i = 0; i <= self.numOfDivisions && self.numOfDivisions != 0; i++)
     {
         if (i != self.numOfDivisions)
         {
-            for (int j = 0; j <= self.numOfSubDivisions; j++)
+            for (int j = 0; j <= self.numOfSubDivisions && self.numOfSubDivisions != 0; j++)
             {
                 // Subdivisions
                 CGFloat value = i * self.divisionUnitValue + j * self.divisionUnitValue/self.numOfSubDivisions;
@@ -206,7 +206,7 @@
     /*!
      *  Draw the limit dot
      */
-    if (self.showLimitDot)
+    if (self.showLimitDot && self.numOfDivisions != 0)
     {
         CGFloat angle = [self angleFromValue:self.limitValue];
         CGPoint dotCenter = CGPointMake(dotRadius * cos(angle) + center.x, dotRadius * sin(angle) + center.y);
@@ -288,7 +288,7 @@
 
 - (CGFloat)angleFromValue:(CGFloat)value
 {
-    CGFloat level = ((value - self.minValue)/self.divisionUnitValue);
+    CGFloat level = self.divisionUnitValue ? (value - self.minValue)/self.divisionUnitValue : 0;
     CGFloat angle = level * self.divisionUnitAngle + self.startAngle;
     return angle;
 }
