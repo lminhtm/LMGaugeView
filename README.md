@@ -68,5 +68,5 @@ Minh Luong Nguyen
 * https://github.com/lminhtm
 * lminhtm@gmail.com
 
-## Projects using LMGeocoder
+## Projects using LMGaugeView
 Feel free to add your project [here](https://github.com/lminhtm/LMGaugeView/wiki/Projects-using-LMGaugeView)
