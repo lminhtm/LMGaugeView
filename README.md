@@ -67,3 +67,6 @@ LMGaugeView is licensed under the terms of the MIT License.
 Minh Luong Nguyen
 * https://github.com/lminhtm
 * lminhtm@gmail.com
+
+## Projects using LMGeocoder
+Feel free to add your project [here](https://github.com/lminhtm/LMGaugeView/wiki/Projects-using-LMGaugeView)
