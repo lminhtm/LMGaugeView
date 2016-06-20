@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "LMGaugeView"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "LMGaugeView is a simple and customizable gauge control for iOS."
   s.homepage         = "https://github.com/lminhtm/LMGaugeView"
   s.license          = 'MIT'

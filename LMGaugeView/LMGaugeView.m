@@ -127,7 +127,7 @@
     /*!
      *  Set progress for ring layer
      */
-    CGFloat progress = self.maxValue ? (self.value - self.minValue)/self.maxValue : 0;
+    CGFloat progress = self.maxValue ? (self.value - self.minValue)/(self.maxValue - self.minValue) : 0;
     self.progressLayer.strokeEnd = progress;
     
     /*!
@@ -183,7 +183,7 @@
             for (int j = 0; j <= self.numOfSubDivisions && self.numOfSubDivisions != 0; j++)
             {
                 // Subdivisions
-                CGFloat value = i * self.divisionUnitValue + j * self.divisionUnitValue/self.numOfSubDivisions;
+                CGFloat value = i * self.divisionUnitValue + j * self.divisionUnitValue/self.numOfSubDivisions + self.minValue;
                 CGFloat angle = [self angleFromValue:value];
                 CGPoint dotCenter = CGPointMake(dotRadius * cos(angle) + center.x, dotRadius * sin(angle) + center.y);
                 [self drawDotAtContext:context
@@ -194,7 +194,7 @@
         }
         
         // Divisions
-        CGFloat value = i * self.divisionUnitValue;
+        CGFloat value = i * self.divisionUnitValue + self.minValue;
         CGFloat angle = [self angleFromValue:value];
         CGPoint dotCenter = CGPointMake(dotRadius * cos(angle) + center.x, dotRadius * sin(angle) + center.y);
         [self drawDotAtContext:context
