@@ -9,7 +9,7 @@
 #import "LMGaugeView.h"
 
 #define kDefaultStartAngle                      M_PI_4 * 3
-#define kDefaultEndAngle                        M_PI_4
+#define kDefaultEndAngle                        M_PI_4 + 2 * M_PI
 #define kDefaultMinValue                        0
 #define kDefaultMaxValue                        120
 #define kDefaultLimitValue                      50
@@ -149,7 +149,7 @@
      *  Prepare drawing
      */
     self.divisionUnitValue = self.numOfDivisions ? (self.maxValue - self.minValue)/self.numOfDivisions : 0;
-    self.divisionUnitAngle = self.numOfDivisions ? (M_PI * 2 - ABS(self.endAngle - self.startAngle))/self.numOfDivisions : 0;
+    self.divisionUnitAngle = self.numOfDivisions ? ABS(self.endAngle - self.startAngle)/self.numOfDivisions : 0;
     CGPoint center = CGPointMake(CGRectGetWidth(self.bounds)/2, CGRectGetHeight(self.bounds)/2);
     CGFloat ringRadius = MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))/2 - self.ringThickness/2;
     CGFloat dotRadius = ringRadius - self.ringThickness/2 - self.divisionsPadding - self.divisionsRadius/2;
