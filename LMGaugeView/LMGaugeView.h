@@ -104,6 +104,21 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable UIColor *valueTextColor;
 
 /*!
+ *  A boolean indicates whether to show min/max value.
+ */
+@property (nonatomic, assign) IBInspectable BOOL showMinMaxValue;
+
+/*!
+ *  Font of min/max value label.
+ */
+@property (nonatomic, strong) IBInspectable UIFont *minMaxValueFont;
+
+/*!
+ *  Text color of min/max value label.
+ */
+@property (nonatomic, strong) IBInspectable UIColor *minMaxValueTextColor;
+
+/*!
  *  A boolean indicates whether to show unit of measurement.
  */
 @property (nonatomic, assign) IBInspectable BOOL showUnitOfMeasurement;

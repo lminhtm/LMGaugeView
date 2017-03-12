@@ -30,8 +30,10 @@
 #define kDefaultLimitDotRadius                  2
 #define kDefaultLimitDotColor                   [UIColor redColor]
 
-#define kDefaultValueFont                       [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:150]
+#define kDefaultValueFont                       [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:140]
 #define kDefaultValueTextColor                  [UIColor colorWithWhite:0.1 alpha:1]
+#define kDefaultMinMaxValueFont                 [UIFont fontWithName:@"HelveticaNeue" size:12]
+#define kDefaultMinMaxValueTextColor            [UIColor colorWithWhite:0.3 alpha:1]
 
 #define kDefaultUnitOfMeasurement               @"km/h"
 #define kDefaultUnitOfMeasurementFont           [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:16]
@@ -48,6 +50,8 @@
 @property (nonatomic, strong) CAShapeLayer *progressLayer;
 @property (nonatomic, strong) UILabel *valueLabel;
 @property (nonatomic, strong) UILabel *unitOfMeasurementLabel;
+@property (nonatomic, strong) UILabel *minValueLabel;
+@property (nonatomic, strong) UILabel *maxValueLabel;
 
 @end
 
@@ -111,6 +115,9 @@
     // Value Text
     _valueFont = kDefaultValueFont;
     _valueTextColor = kDefaultValueTextColor;
+    _showMinMaxValue = YES;
+    _minMaxValueFont = kDefaultMinMaxValueFont;
+    _minMaxValueTextColor = kDefaultMinMaxValueTextColor;
     
     // Unit Of Measurement
     _showUnitOfMeasurement = YES;
@@ -260,6 +267,44 @@
     CGFloat insetX = self.ringThickness + self.divisionsPadding * 2 + self.divisionsRadius;
     self.valueLabel.frame = CGRectInset(self.progressLayer.frame, insetX, insetX);
     self.valueLabel.frame = CGRectOffset(self.valueLabel.frame, 0, self.showUnitOfMeasurement ? -self.divisionsPadding/2 : 0);
+    
+    /*!
+     *  Min Value Label
+     */
+    if (!self.minValueLabel)
+    {
+        self.minValueLabel = [[UILabel alloc] init];
+        self.minValueLabel.backgroundColor = [UIColor clearColor];
+        self.minValueLabel.textAlignment = NSTextAlignmentLeft;
+        self.minValueLabel.adjustsFontSizeToFitWidth = YES;
+        [self addSubview:self.minValueLabel];
+    }
+    self.minValueLabel.text = [NSString stringWithFormat:@"%0.f", self.minValue];
+    self.minValueLabel.font = self.minMaxValueFont;
+    self.minValueLabel.minimumScaleFactor = 10/self.minValueLabel.font.pointSize;
+    self.minValueLabel.textColor = self.minMaxValueTextColor;
+    self.minValueLabel.hidden = !self.showMinMaxValue;
+    CGPoint minDotCenter = CGPointMake(dotRadius * cos(self.startAngle) + center.x, dotRadius * sin(self.startAngle) + center.y);
+    self.minValueLabel.frame = CGRectMake(minDotCenter.x + 8, minDotCenter.y - 20, 40, 20);
+    
+    /*!
+     *  Max Value Label
+     */
+    if (!self.maxValueLabel)
+    {
+        self.maxValueLabel = [[UILabel alloc] init];
+        self.maxValueLabel.backgroundColor = [UIColor clearColor];
+        self.maxValueLabel.textAlignment = NSTextAlignmentRight;
+        self.maxValueLabel.adjustsFontSizeToFitWidth = YES;
+        [self addSubview:self.maxValueLabel];
+    }
+    self.maxValueLabel.text = [NSString stringWithFormat:@"%0.f", self.maxValue];
+    self.maxValueLabel.font = self.minMaxValueFont;
+    self.maxValueLabel.minimumScaleFactor = 10/self.maxValueLabel.font.pointSize;
+    self.maxValueLabel.textColor = self.minMaxValueTextColor;
+    self.maxValueLabel.hidden = !self.showMinMaxValue;
+    CGPoint maxDotCenter = CGPointMake(dotRadius * cos(self.endAngle) + center.x, dotRadius * sin(self.endAngle) + center.y);
+    self.maxValueLabel.frame = CGRectMake(maxDotCenter.x - 8 - 40, maxDotCenter.y - 20, 40, 20);
     
     /*!
      *  Unit Of Measurement Label
@@ -474,6 +519,33 @@
         _valueTextColor = valueTextColor;
         
         self.valueLabel.textColor = _valueTextColor;
+    }
+}
+
+- (void)setShowMinMaxValue:(BOOL)showMinMaxValue
+{
+    if (_showMinMaxValue != showMinMaxValue) {
+        _showMinMaxValue = showMinMaxValue;
+        
+        [self setNeedsDisplay];
+    }
+}
+
+- (void)setMinMaxValueFont:(UIFont *)minMaxValueFont
+{
+    if (_minMaxValueFont != minMaxValueFont) {
+        _minMaxValueFont = minMaxValueFont;
+        
+        [self setNeedsDisplay];
+    }
+}
+
+- (void)setMinMaxValueTextColor:(UIColor *)minMaxValueTextColor
+{
+    if (_minMaxValueTextColor != minMaxValueTextColor) {
+        _minMaxValueTextColor = minMaxValueTextColor;
+        
+        [self setNeedsDisplay];
     }
 }
 
