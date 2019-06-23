@@ -49,6 +49,11 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable CGFloat ringThickness;
 
 /*!
+ *  A boolean indicates whether to show ring background.
+ */
+@property (nonatomic, assign) IBInspectable BOOL showRingBackground;
+
+/*!
  *  The background color of the ring.
  */
 @property (nonatomic, strong) IBInspectable UIColor *ringBackgroundColor;
@@ -137,6 +142,11 @@ IB_DESIGNABLE
  *  Text color of unit of measurement label.
  */
 @property (nonatomic, strong) IBInspectable UIColor *unitOfMeasurementTextColor;
+
+/*!
+ *  A boolean indicates whether to show decimal value.
+ */
+@property (nonatomic, assign) IBInspectable BOOL decimalFormat;
 
 /*!
  *  The receiver of all gauge view delegate callbacks.
