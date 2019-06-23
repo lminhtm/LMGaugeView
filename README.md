@@ -2,9 +2,10 @@ LMGaugeView
 ==============
 LMGaugeView is a simple and customizable gauge control for iOS inspired by [Flavor](https://dribbble.com/flavor) sketch on [Dribbble](https://dribbble.com/shots/1217274-Speedometer-Day-Night-Mode).
 
-<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot1.png"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot3.gif"/>
+<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot1.png"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot3.gif"/>
+
+## Swift Version
+https://github.com/lminhtm/LMGaugeViewSwift
 
 ## Features
 * Display a gauge, such as a speedometer or a loading indicator.
@@ -13,7 +14,7 @@ LMGaugeView is a simple and customizable gauge control for iOS inspired by [Flav
 * Support Interface Builder Designable.
 
 ## Requirements
-* iOS 7.0 or higher 
+* iOS 8.0 or higher 
 * ARC
 
 ## Installation
