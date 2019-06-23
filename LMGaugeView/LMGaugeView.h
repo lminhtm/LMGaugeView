@@ -29,9 +29,9 @@ IB_DESIGNABLE
 @property (nonatomic, assign) CGFloat maxValue;
 
 /*!
- *  Limit value.
+ *  Limit values
  */
-@property (nonatomic, assign) CGFloat limitValue;
+@property (nonatomic, strong) NSArray *limitValues;
 
 /*!
  *  The number of divisions.
@@ -91,7 +91,7 @@ IB_DESIGNABLE
 /*!
  *  The color of limit dot.
  */
-@property (nonatomic, strong) IBInspectable UIColor *limitDotColor;
+@property (nonatomic, strong) NSArray *limitDotColors;
 
 /*!
  *  Font of value label.

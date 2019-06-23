@@ -36,7 +36,7 @@
     // Configure gauge view
     self.gaugeView.minValue = 0;
     self.gaugeView.maxValue = 120;
-    self.gaugeView.limitValue = 50;
+    self.gaugeView.limitValues = @[@50];
     
     // Create a timer to update value for gauge view
     velocity = 0;
@@ -54,7 +54,8 @@
 
 - (UIColor *)gaugeView:(LMGaugeView *)gaugeView ringStokeColorForValue:(CGFloat)value
 {
-    if (value >= self.gaugeView.limitValue) {
+    NSNumber *limitValue = [self.gaugeView.limitValues firstObject];
+    if (value >= limitValue.doubleValue) {
         return kMyRedColor;
     }
     if (self.nightModeSwitch.on) {

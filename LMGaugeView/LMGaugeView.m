@@ -90,7 +90,7 @@
     _value = kDefaultMinValue;
     _minValue = kDefaultMinValue;
     _maxValue = kDefaultMaxValue;
-    _limitValue = kDefaultLimitValue;
+    _limitValues = @[@(kDefaultLimitValue)];
     _numOfDivisions = kDefaultNumOfDivisions;
     _numOfSubDivisions = kDefaultNumOfSubDivisions;
     
@@ -110,7 +110,7 @@
     // Limit dot
     _showLimitDot = YES;
     _limitDotRadius = kDefaultLimitDotRadius;
-    _limitDotColor = kDefaultLimitDotColor;
+    _limitDotColors = @[kDefaultLimitDotColor];
     
     // Value Text
     _valueFont = kDefaultValueFont;
@@ -215,12 +215,19 @@
      */
     if (self.showLimitDot && self.numOfDivisions != 0)
     {
-        CGFloat angle = [self angleFromValue:self.limitValue];
-        CGPoint dotCenter = CGPointMake(dotRadius * cos(angle) + center.x, dotRadius * sin(angle) + center.y);
-        [self drawDotAtContext:context
-                        center:dotCenter
-                        radius:self.limitDotRadius
-                     fillColor:self.limitDotColor.CGColor];
+        for (int i = 0; i < self.limitValues.count; i++) {
+            NSNumber *limitValue = [self.limitValues objectAtIndex:i];
+            if (limitValue.doubleValue >= self.minValue && limitValue.doubleValue <= self.maxValue) {
+                CGFloat angle = [self angleFromValue:limitValue.doubleValue];
+                CGPoint dotCenter = CGPointMake(dotRadius * cos(angle) + center.x, dotRadius * sin(angle) + center.y);
+                UIColor *limitDotColor = i < self.limitDotColors.count ? self.limitDotColors[i] : kDefaultLimitDotColor;
+                
+                [self drawDotAtContext:context
+                                center:dotCenter
+                                radius:self.limitDotRadius
+                             fillColor:limitDotColor.CGColor];
+            }
+        }
     }
     
     /*!
@@ -386,10 +393,10 @@
     }
 }
 
-- (void)setLimitValue:(CGFloat)limitValue
+- (void)setLimitValues:(NSArray *)limitValues
 {
-    if (_limitValue != limitValue && limitValue >= _minValue && limitValue <= _maxValue) {
-        _limitValue = limitValue;
+    if (_limitValues != limitValues) {
+        _limitValues = limitValues;
         
         [self setNeedsDisplay];
     }
@@ -494,10 +501,10 @@
     }
 }
 
-- (void)setLimitDotColor:(UIColor *)limitDotColor
+- (void)setLimitDotColors:(NSArray *)limitDotColors
 {
-    if (_limitDotColor != limitDotColor) {
-        _limitDotColor = limitDotColor;
+    if (_limitDotColors != limitDotColors) {
+        _limitDotColors = limitDotColors;
         
         [self setNeedsDisplay];
     }
