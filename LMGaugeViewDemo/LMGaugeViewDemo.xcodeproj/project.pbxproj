@@ -147,6 +147,11 @@
 				CLASSPREFIX = LM;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = LMinh;
+				TargetAttributes = {
+					6216641C198AB252009AD267 = {
+						DevelopmentTeam = 6HXC4UA9AV;
+					};
+				};
 			};
 			buildConfigurationList = 62166418198AB252009AD267 /* Build configuration list for PBXProject "LMGaugeViewDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -318,11 +323,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6HXC4UA9AV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LMGaugeViewDemo/LMGaugeViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "LMGaugeViewDemo/LMGaugeViewDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lminh.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lminhtm.LMGaugeView;
 				PRODUCT_NAME = LMGaugeView;
 				WRAPPER_EXTENSION = app;
 			};
@@ -333,11 +339,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6HXC4UA9AV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LMGaugeViewDemo/LMGaugeViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "LMGaugeViewDemo/LMGaugeViewDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lminh.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lminhtm.LMGaugeView;
 				PRODUCT_NAME = LMGaugeView;
 				WRAPPER_EXTENSION = app;
 			};
